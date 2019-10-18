@@ -9,5 +9,9 @@ export default {
     return CoreML.exampleMethod()
   },
 
+  test (name) {
+    return CoreML.test(name)
+  },
+
   EXAMPLE_CONSTANT: CoreML.EXAMPLE_CONSTANT,
 }

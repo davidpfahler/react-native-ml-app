@@ -32,4 +32,7 @@
 // https://facebook.github.io/react-native/docs/native-modules-ios.html#exporting-swift
 RCT_EXTERN_METHOD(exampleMethod)
 
+RCT_EXTERN_METHOD(test:(NSString *)name resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+
+
 @end

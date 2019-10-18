@@ -12,8 +12,9 @@ import imgPath from './airedale.jpg';
 
 import CoreML from './CoreMLNativeModule';
 
-setTimeout(() => {
-    console.log(CoreML.EXAMPLE_CONSTANT);
+setTimeout(async () => {
+    const greeting = await CoreML.test('David');
+    console.log(greeting);
 
     // try {
     //     const mlmodel = await resolveAssetSource(modelPath);
