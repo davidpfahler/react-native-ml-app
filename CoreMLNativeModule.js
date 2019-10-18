@@ -5,13 +5,10 @@ import { NativeModules } from 'react-native'
 const { CoreML } = NativeModules
 
 export default {
-  exampleMethod () {
-    return CoreML.exampleMethod()
+  compileModel (uncompiledModelPath) {
+    return CoreML.compileModel(uncompiledModelPath);
   },
-
-  test (name) {
-    return CoreML.test(name)
+  classifyImageWithModel (imgPath, compiledModelPath) {
+    return CoreML.classifyImageWithModel(imgPath, compiledModelPath);
   },
-
-  EXAMPLE_CONSTANT: CoreML.EXAMPLE_CONSTANT,
 }

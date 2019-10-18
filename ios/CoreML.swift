@@ -1,19 +1,63 @@
 import Foundation
+import Vision
 
+@available(iOS 12.0, *)
 @objc(CoreML)
-class CoreML : NSObject {
-  @objc func test(_ name: String, resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) ->Void {
-    resolve("Hello " + name)
+public class CoreML : NSObject {
+  var models:[String:MLModel] = [:]
+  
+  func getModel(_ modelPath: String) -> MLModel? {
+    if let m = models[modelPath] { return m }
+    let modelURL = URL(fileURLWithPath: modelPath)
+    if let m = try? MLModel(contentsOf: modelURL) {
+      models[modelPath] = m
+      return m
+    }
+    return nil
   }
 
-  // Export constants to use in your native module
-  @objc
-  func constantsToExport() -> [String : Any]! {
-    return ["EXAMPLE_CONSTANT": "example"]
+  // @objc: instruct Swift to make method available to Obj-C runtime
+  @objc func compileModel(_ uncompiledModelPath: String, resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) ->Void {
+    DispatchQueue(label: "RNCoreML").async() {
+      let url = URL(fileURLWithPath: uncompiledModelPath)
+      do {
+        let tempURL:URL = try MLModel.compileModel(at:url)
+        resolve(tempURL.path);
+      } catch {
+        reject(nil, nil, error);
+      }
+    }
   }
 
-  // Implement methods that you want to export to the native module
-  @objc func exampleMethod() {
-    // Implement method
+  @objc func classifyImageWithModel(_ imgPath: String, compiledModelPath: String, resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) ->Void {
+    guard let model = getModel(compiledModelPath) else {
+      reject("no_model", "Could not load model with path" +  compiledModelPath, nil)
+      return
+    }
+    do {
+      let imageURL = URL(fileURLWithPath: imgPath)
+      let vModel = try VNCoreMLModel(for: model);
+      let image = CIImage(contentsOf: imageURL);
+      let handler = VNImageRequestHandler(ciImage: image!);
+      let request = VNCoreMLRequest(model: vModel) { (req, e) -> Void in
+        if let results = req.results {
+          if let labels = results as? [VNClassificationObservation] {
+            var out = [[String:Any]]();
+            labels.forEach() { (thisClass) in
+              let value = thisClass.confidence;
+              let key = thisClass.identifier;
+              out.append(["key":key, "value":value]);
+            }
+            resolve(out);
+            return;
+          }
+        }
+        reject(nil, nil, nil);
+      }
+      request.imageCropAndScaleOption = VNImageCropAndScaleOption.centerCrop
+      try handler.perform([request]);
+    } catch {
+      reject("model_error", "Error from model: " + error.localizedDescription, error);
+    }
   }
 }

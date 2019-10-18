@@ -30,9 +30,7 @@
 
 // Export methods to a native module
 // https://facebook.github.io/react-native/docs/native-modules-ios.html#exporting-swift
-RCT_EXTERN_METHOD(exampleMethod)
-
-RCT_EXTERN_METHOD(test:(NSString *)name resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
-
+RCT_EXTERN_METHOD(compileModel:(NSString *)uncompiledModelPath resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(classifyImageWithModel:(NSString *)imgPath compiledModelPath:(NSString *)compiledModelPath resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
 @end
