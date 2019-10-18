@@ -19,6 +19,8 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeMLAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeMLAppTests.m */; };
 		3D8A65452668928CA4B2D7FD /* libPods-ReactNativeMLApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0C42333FDAC0B19B5305F2 /* libPods-ReactNativeMLApp-tvOSTests.a */; };
+		61EAF8DA235A3A040018BB7F /* CoreML.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EAF8D7235A3A040018BB7F /* CoreML.m */; };
+		61EAF8DB235A3A040018BB7F /* CoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EAF8D9235A3A040018BB7F /* CoreML.swift */; };
 		AC6EBC7278B235DB06313B3C /* libPods-ReactNativeMLApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC77E81BC94A07AD84654FEA /* libPods-ReactNativeMLApp-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,9 @@
 		47520B770E0F6A7AC4827C29 /* Pods-ReactNativeMLAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLAppTests/Pods-ReactNativeMLAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E0E57A0038F72515B2E7D1F /* Pods-ReactNativeMLAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLAppTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLAppTests/Pods-ReactNativeMLAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5EE93ADEBCBD82546A237B43 /* Pods-ReactNativeMLApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLApp-tvOSTests/Pods-ReactNativeMLApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		61EAF8D7235A3A040018BB7F /* CoreML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreML.m; sourceTree = "<group>"; };
+		61EAF8D8235A3A040018BB7F /* CoreML-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreML-Bridging-Header.h"; sourceTree = "<group>"; };
+		61EAF8D9235A3A040018BB7F /* CoreML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreML.swift; sourceTree = "<group>"; };
 		75894FFABD25DAAF8D7A4606 /* libPods-ReactNativeMLAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeMLAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F54C24AE3657BED2724771 /* Pods-ReactNativeMLApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLApp-tvOSTests/Pods-ReactNativeMLApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8596A8B33450A70DC6BC5808 /* libPods-ReactNativeMLApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeMLApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +130,9 @@
 		13B07FAE1A68108700A75B9A /* ReactNativeMLApp */ = {
 			isa = PBXGroup;
 			children = (
+				61EAF8D8235A3A040018BB7F /* CoreML-Bridging-Header.h */,
+				61EAF8D7235A3A040018BB7F /* CoreML.m */,
+				61EAF8D9235A3A040018BB7F /* CoreML.swift */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -161,7 +169,6 @@
 				47520B770E0F6A7AC4827C29 /* Pods-ReactNativeMLAppTests.debug.xcconfig */,
 				5E0E57A0038F72515B2E7D1F /* Pods-ReactNativeMLAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +299,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1110;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +318,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,6 +539,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61EAF8DA235A3A040018BB7F /* CoreML.m in Sources */,
+				61EAF8DB235A3A040018BB7F /* CoreML.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -582,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47520B770E0F6A7AC4827C29 /* Pods-ReactNativeMLAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E0E57A0038F72515B2E7D1F /* Pods-ReactNativeMLAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = ReactNativeMLAppTests/Info.plist;
@@ -626,6 +641,7 @@
 			baseConfigurationReference = EFF1BD5E881EB8D7C6F88A88 /* Pods-ReactNativeMLApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = ReactNativeMLApp/Info.plist;
@@ -637,6 +653,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeMLApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeMLApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,6 +665,7 @@
 			baseConfigurationReference = F35D5346C005A354BC0CFFD6 /* Pods-ReactNativeMLApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = ReactNativeMLApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +676,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeMLApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeMLApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
