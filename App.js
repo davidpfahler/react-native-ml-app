@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 
 import {
@@ -24,8 +25,47 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { Button } from 'react-native-material-ui';
+
+import modelResource from './dogs-resnet18.mlmodel';
+import imgPath from './airedale.jpg';
+import CameraScreen from './src/CameraScreen';
+import Model from './src/Model';
+import classes from './src/classes';
+
+const model = new Model(modelResource, classes);
+
 const App: () => React$Node = () => {
-  return (
+  const [loaded, setLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [cameraShown, setCameraShown] = useState(false);
+  const [imgData, setImgData] = useState(null);
+  const takePictureCallback = data => {
+    setCameraShown(false);
+    setImgData(data);
+  }
+
+  async function loadModel () {
+    if (isLoading || loaded) { return; }
+    setIsLoading(true);
+    try {
+      await model.loadModel();
+    } catch (e) {
+      throw e
+    }
+    // const files = await RNFS.readDir(RNFS.MainBundlePath)
+    // console.log(files.map(f => f.name));
+    setLoaded(true);
+    setIsLoading(false);
+  }
+  useEffect(() => { loadModel() }, []);
+
+  useEffect(() => {
+    if (!loaded || !imgData) { return; }
+    model.runModel(imgData.uri);
+  }, [loaded, imgData]); // runs when loaded or data changes
+  
+  return (cameraShown ? <CameraScreen takePictureCallback={takePictureCallback} /> :
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
@@ -33,38 +73,15 @@ const App: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
+          {imgData && <Image source={{uri: imgData.uri}} />}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
+                Model is {isLoading ? 'loading...' : 'loaded.'}
               </Text>
+              <Button text="Show Camera" primary raised onPress={() => setCameraShown(true)} />
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -75,10 +92,6 @@ const App: () => React$Node = () => {
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
   },
   body: {
     backgroundColor: Colors.white,
@@ -97,9 +110,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '400',
     color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
   },
   footer: {
     color: Colors.dark,

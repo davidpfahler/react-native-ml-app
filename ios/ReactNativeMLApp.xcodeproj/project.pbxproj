@@ -14,14 +14,27 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2405DAF51E174A638F824C06 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38F7B309FD764C9892C008EB /* Roboto-Medium.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeMLAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeMLAppTests.m */; };
+		2E8528B5C62C441BBCC253FE /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEC3E05DA0074940BF822B3F /* Roboto-Black.ttf */; };
+		3A5347A7250E4FCA80A6389D /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 501F17183F2F446E97716BD7 /* Roboto-BlackItalic.ttf */; };
 		3D8A65452668928CA4B2D7FD /* libPods-ReactNativeMLApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0C42333FDAC0B19B5305F2 /* libPods-ReactNativeMLApp-tvOSTests.a */; };
+		56E6CB1C15C9491DA68B8B60 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9829C2708BE44CA91E99B83 /* Roboto-Thin.ttf */; };
+		603367D7FD484642B81B4742 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31FB6B44AE0147F2BA8E1A01 /* Roboto-Light.ttf */; };
+		614A1E48235CCD8000F97C54 /* dogs-resnet18.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 614A1E47235CCD8000F97C54 /* dogs-resnet18.mlmodel */; };
 		61EAF8DA235A3A040018BB7F /* CoreML.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EAF8D7235A3A040018BB7F /* CoreML.m */; };
 		61EAF8DB235A3A040018BB7F /* CoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EAF8D9235A3A040018BB7F /* CoreML.swift */; };
+		69DF45CB00FF4DA3864A98BD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E4B228F9DB84C38B77B1A5F /* Roboto-Bold.ttf */; };
+		AB09D9F6F9734B398E0EDAA8 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA21BFA8F5D8461BB3E33A61 /* Roboto-MediumItalic.ttf */; };
 		AC6EBC7278B235DB06313B3C /* libPods-ReactNativeMLApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC77E81BC94A07AD84654FEA /* libPods-ReactNativeMLApp-tvOS.a */; };
+		D59F379503B74AD2AAB67143 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BF3471954A6476F91DC35A2 /* Roboto-ThinItalic.ttf */; };
+		E9A3085D0B3844F2A3EE9981 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9B83248E22B415AA88CD7CD /* Roboto-LightItalic.ttf */; };
+		EF33D7ACB5704E72995E39C3 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54BC8A8C754143B0B88408FD /* Roboto-BoldItalic.ttf */; };
+		F1D0B3B87C404AB9BB47C64F /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72F3AD14D725489CBABBBBC0 /* Roboto-Italic.ttf */; };
+		FC6B2DEE73034144BA71F2B1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23647F2CFF824587A0001099 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,18 +68,31 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeMLApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeMLApp/main.m; sourceTree = "<group>"; };
 		1D0C42333FDAC0B19B5305F2 /* libPods-ReactNativeMLApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeMLApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23647F2CFF824587A0001099 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ReactNativeMLApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactNativeMLApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ReactNativeMLApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactNativeMLApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FB6B44AE0147F2BA8E1A01 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		38F7B309FD764C9892C008EB /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		47520B770E0F6A7AC4827C29 /* Pods-ReactNativeMLAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLAppTests/Pods-ReactNativeMLAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		501F17183F2F446E97716BD7 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../src/assets/fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		54BC8A8C754143B0B88408FD /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../src/assets/fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		5E0E57A0038F72515B2E7D1F /* Pods-ReactNativeMLAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLAppTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLAppTests/Pods-ReactNativeMLAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5EE93ADEBCBD82546A237B43 /* Pods-ReactNativeMLApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLApp-tvOSTests/Pods-ReactNativeMLApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		614A1E47235CCD8000F97C54 /* dogs-resnet18.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "dogs-resnet18.mlmodel"; path = "../dogs-resnet18.mlmodel"; sourceTree = "<group>"; };
 		61EAF8D7235A3A040018BB7F /* CoreML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreML.m; sourceTree = "<group>"; };
 		61EAF8D8235A3A040018BB7F /* CoreML-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreML-Bridging-Header.h"; sourceTree = "<group>"; };
 		61EAF8D9235A3A040018BB7F /* CoreML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreML.swift; sourceTree = "<group>"; };
+		6E4B228F9DB84C38B77B1A5F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		72F3AD14D725489CBABBBBC0 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../src/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		75894FFABD25DAAF8D7A4606 /* libPods-ReactNativeMLAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeMLAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF3471954A6476F91DC35A2 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ThinItalic.ttf"; path = "../src/assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		81F54C24AE3657BED2724771 /* Pods-ReactNativeMLApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLApp-tvOSTests/Pods-ReactNativeMLApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8596A8B33450A70DC6BC5808 /* libPods-ReactNativeMLApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeMLApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9829C2708BE44CA91E99B83 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../src/assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		AC77E81BC94A07AD84654FEA /* libPods-ReactNativeMLApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeMLApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B83248E22B415AA88CD7CD /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../src/assets/fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		DA21BFA8F5D8461BB3E33A61 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../src/assets/fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		DEC3E05DA0074940BF822B3F /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EEF5404445E206AFEB0CBD78 /* Pods-ReactNativeMLApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeMLApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeMLApp-tvOS/Pods-ReactNativeMLApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +159,7 @@
 				61EAF8D8235A3A040018BB7F /* CoreML-Bridging-Header.h */,
 				61EAF8D7235A3A040018BB7F /* CoreML.m */,
 				61EAF8D9235A3A040018BB7F /* CoreML.swift */,
+				614A1E47235CCD8000F97C54 /* dogs-resnet18.mlmodel */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -172,6 +199,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		77C12785C47C4093B17A4A55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3E05DA0074940BF822B3F /* Roboto-Black.ttf */,
+				501F17183F2F446E97716BD7 /* Roboto-BlackItalic.ttf */,
+				6E4B228F9DB84C38B77B1A5F /* Roboto-Bold.ttf */,
+				54BC8A8C754143B0B88408FD /* Roboto-BoldItalic.ttf */,
+				72F3AD14D725489CBABBBBC0 /* Roboto-Italic.ttf */,
+				31FB6B44AE0147F2BA8E1A01 /* Roboto-Light.ttf */,
+				C9B83248E22B415AA88CD7CD /* Roboto-LightItalic.ttf */,
+				38F7B309FD764C9892C008EB /* Roboto-Medium.ttf */,
+				DA21BFA8F5D8461BB3E33A61 /* Roboto-MediumItalic.ttf */,
+				23647F2CFF824587A0001099 /* Roboto-Regular.ttf */,
+				A9829C2708BE44CA91E99B83 /* Roboto-Thin.ttf */,
+				7BF3471954A6476F91DC35A2 /* Roboto-ThinItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +234,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				61FABC9C691CF26A24E0D72D /* Pods */,
+				77C12785C47C4093B17A4A55 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -237,6 +284,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				C6704990BB8450D50C1AD2C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,22 +340,26 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 4LVMDLAZ4X;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 4LVMDLAZ4X;
 						LastSwiftMigration = 1110;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4LVMDLAZ4X;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4LVMDLAZ4X;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -349,6 +401,18 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				2E8528B5C62C441BBCC253FE /* Roboto-Black.ttf in Resources */,
+				3A5347A7250E4FCA80A6389D /* Roboto-BlackItalic.ttf in Resources */,
+				69DF45CB00FF4DA3864A98BD /* Roboto-Bold.ttf in Resources */,
+				EF33D7ACB5704E72995E39C3 /* Roboto-BoldItalic.ttf in Resources */,
+				F1D0B3B87C404AB9BB47C64F /* Roboto-Italic.ttf in Resources */,
+				603367D7FD484642B81B4742 /* Roboto-Light.ttf in Resources */,
+				E9A3085D0B3844F2A3EE9981 /* Roboto-LightItalic.ttf in Resources */,
+				2405DAF51E174A638F824C06 /* Roboto-Medium.ttf in Resources */,
+				AB09D9F6F9734B398E0EDAA8 /* Roboto-MediumItalic.ttf in Resources */,
+				FC6B2DEE73034144BA71F2B1 /* Roboto-Regular.ttf in Resources */,
+				56E6CB1C15C9491DA68B8B60 /* Roboto-Thin.ttf in Resources */,
+				D59F379503B74AD2AAB67143 /* Roboto-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +550,54 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C6704990BB8450D50C1AD2C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeMLApp/Pods-ReactNativeMLApp-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeMLApp/Pods-ReactNativeMLApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,6 +654,7 @@
 				61EAF8DA235A3A040018BB7F /* CoreML.m in Sources */,
 				61EAF8DB235A3A040018BB7F /* CoreML.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				614A1E48235CCD8000F97C54 /* dogs-resnet18.mlmodel in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +710,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -621,7 +736,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				INFOPLIST_FILE = ReactNativeMLAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -642,9 +759,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				INFOPLIST_FILE = ReactNativeMLApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -666,8 +786,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				INFOPLIST_FILE = ReactNativeMLApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -693,6 +816,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "ReactNativeMLApp-tvOS/Info.plist";
@@ -722,6 +846,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "ReactNativeMLApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -748,6 +873,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "ReactNativeMLApp-tvOSTests/Info.plist";
@@ -776,6 +902,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "ReactNativeMLApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -838,7 +965,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -884,7 +1011,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
