@@ -27,6 +27,7 @@ import {
 
 import { Button } from 'react-native-material-ui';
 import fs from 'react-native-fs';
+import SafeAreaHelper from 'react-native-safe-area-helper'
 
 import modelResource from './dogs-resnet18.mlmodel';
 import imgPath from './airedale.jpg';
@@ -41,9 +42,14 @@ const App: () => React$Node = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [cameraShown, setCameraShown] = useState(false);
   const [imgData, setImgData] = useState(null);
-  const takePictureCallback = data => {
-    setCameraShown(false);
+  const [safeAreaInsets, setSafeAreaInsets] = useState({});
+  const onPicTaken = data => {
     setImgData(data);
+    setCameraShown(false);
+  }
+
+  function onSafeAreaInsetsChange (safeAreaInsets) {
+    setSafeAreaInsets(safeAreaInsets);
   }
 
   async function loadModel () {
@@ -64,15 +70,18 @@ const App: () => React$Node = () => {
     model.runModel(imgData.uri);
   }, [loaded, imgData]); // runs when loaded or data changes
   
-  return (cameraShown ? <CameraScreen takePictureCallback={takePictureCallback} /> :
-    <>
+  return (cameraShown ? <CameraScreen
+      onPicTaken={onPicTaken}
+      safeAreaInsets={safeAreaInsets}
+    /> : <>
+      <SafeAreaHelper onInsetsChange={onSafeAreaInsetsChange} />
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
-          {imgData && <Image source={{uri: imgData.uri}} />}
+          {imgData && <Image source={{uri: imgData.uri, isStatic: true}} style={{width: 100, height: 100}} />}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
