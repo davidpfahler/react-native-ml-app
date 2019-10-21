@@ -11,31 +11,7 @@ export default class Model {
         this._modelResource = modelResource;
         this.classes = classes;
     }
-    async loadModel () {
-        if (this._mlmodelc) {
-            console.warn('Model already loaded!');
-            return this._mlmodelc;
-        }
-        let mlmodel, uncompiledModelPath, mlmodelc
-        // try {
-        //     mlmodel = await resolveAssetSource(this._modelResource);
-        // } catch (e) {
-        //     throw new Error(`could not resolve asset source: ${e}`);
-        // }
-        // try {
-        //     uncompiledModelPath = await getLocalPathFromUri(mlmodel.uri);
-        // } catch (e) {
-        //     throw new Error(`cannot get local path from uri: ${e}`);
-        // }
-        try {
-            mlmodelc = await CoreML.compileModel(fs.MainBundlePath + '/dogs-resnet18.mlmodelc');
-        } catch (e) {
-            throw new Error(`cannot compile model: ${e}`);
-        }
-        this._mlmodelc = mlmodelc;
-        return this;
-    }
-    async runModel (imgResource) {
+    async runModel (imgResource, mlmodelc) {
         try {
             const img = await resolveAssetSource(imgResource);
             const localImgPath = await getLocalPathFromUri(img.uri);
@@ -69,9 +45,13 @@ export default class Model {
 
 async function getLocalPathFromUri (uri) {
     if (uri.startsWith('http')) {
-        const r = /([^/]+)\?.+$/;
-        const fname = uri.match(r)[1];
-        const localPath = fs.DocumentDirectoryPath + fname;
+        const r = /[^/]+$/g;
+        const [fname] = uri.match(r);
+        let localPath = fs.DocumentDirectoryPath;
+        if (!(localPath.endsWith('/') || fname.startsWith('/'))) {
+            localPath += '/';
+        }
+        localPath += fname;
         const { jobId, promise } = fs.downloadFile({
             fromUrl: uri,
             toFile: localPath,
@@ -79,5 +59,7 @@ async function getLocalPathFromUri (uri) {
         await promise;
         return localPath;
     }
+    const data = await fs.stat(uri);
+    console.log('data', data);
     return uri;
 }

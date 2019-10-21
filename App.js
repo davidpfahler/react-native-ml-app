@@ -26,6 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { Button } from 'react-native-material-ui';
+import fs from 'react-native-fs';
 
 import modelResource from './dogs-resnet18.mlmodel';
 import imgPath from './airedale.jpg';
@@ -49,12 +50,10 @@ const App: () => React$Node = () => {
     if (isLoading || loaded) { return; }
     setIsLoading(true);
     try {
-      await model.loadModel();
+      await model.runModel(imgPath, fs.MainBundlePath + '/dogs-resnet18.mlmodelc')
     } catch (e) {
-      throw e
+      console.error(e); // TODO: error handling
     }
-    // const files = await RNFS.readDir(RNFS.MainBundlePath)
-    // console.log(files.map(f => f.name));
     setLoaded(true);
     setIsLoading(false);
   }

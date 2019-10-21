@@ -1,13 +1,13 @@
 export const getBreed = className => className.split('_').map(p => {
     return p.charAt(0).toUpperCase() + p.slice(1)
-}).join(' ')
+}).join(' ');
 
 export const getBreedImg = className => {
     const breed = className.split('_').map(p => {
         return p.charAt(0).toLowerCase() + p.slice(1)
     }).join('_')
     return `${process.env.PUBLIC_URL}/images/${breed}.jpg`
-}
+};
 
 // How to preprocess input in CoreML?
 // const preprocess = input => {
