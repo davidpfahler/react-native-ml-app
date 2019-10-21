@@ -1,49 +1,36 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {useRef, useEffect, useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
-  Text,
   StatusBar,
   Image,
 } from 'react-native';
 
 import {
   Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
 import { Button } from 'react-native-material-ui';
 import fs from 'react-native-fs';
-import SafeAreaHelper from 'react-native-safe-area-helper'
+import SafeAreaHelper from 'react-native-safe-area-helper';
 
-import modelResource from './dogs-resnet18.mlmodel';
-import imgPath from './airedale.jpg';
 import CameraScreen from './src/CameraScreen';
-import Model from './src/Model';
+import {getActsOfModelForImg, getTopKClassesFromActs} from './src/model';
 import classes from './src/classes';
+import {wait} from './src/utils';
 
-const model = new Model(modelResource, classes);
+const getActsForImg = getActsOfModelForImg.bind(null, fs.MainBundlePath + '/dogs-resnet18.mlmodelc')
+const getTop5BreedsFromActs = getTopKClassesFromActs.bind(null, 5, classes);
 
 const App: () => React$Node = () => {
-  const [loaded, setLoaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [cameraShown, setCameraShown] = useState(false);
   const [imgData, setImgData] = useState(null);
   const [safeAreaInsets, setSafeAreaInsets] = useState({});
-  const onPicTaken = data => {
+  
+  function onPicTaken (data) {
     setImgData(data);
     setCameraShown(false);
   }
@@ -52,23 +39,22 @@ const App: () => React$Node = () => {
     setSafeAreaInsets(safeAreaInsets);
   }
 
-  async function loadModel () {
-    if (isLoading || loaded) { return; }
-    setIsLoading(true);
+  async function runModel () {
+    await wait(1500);
     try {
-      await model.runModel(imgPath, fs.MainBundlePath + '/dogs-resnet18.mlmodelc')
+      var acts = await getActsForImg(imgData.uri);
     } catch (e) {
       console.error(e); // TODO: error handling
+      return e;
     }
-    setLoaded(true);
-    setIsLoading(false);
+    const top5 = getTop5BreedsFromActs(acts);
+    return top5;
   }
-  useEffect(() => { loadModel() }, []);
 
   useEffect(() => {
-    if (!loaded || !imgData) { return; }
-    model.runModel(imgData.uri);
-  }, [loaded, imgData]); // runs when loaded or data changes
+    if (!imgData || !imgData.uri) { return; }
+    runModel(imgData.uri);
+  }, [imgData]); // runs when imgData changes
   
   return (cameraShown ? <CameraScreen
       onPicTaken={onPicTaken}
@@ -84,10 +70,6 @@ const App: () => React$Node = () => {
           {imgData && <Image source={{uri: imgData.uri, isStatic: true}} style={{width: 100, height: 100}} />}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Model is {isLoading ? 'loading...' : 'loaded.'}
-              </Text>
               <Button text="Show Camera" primary raised onPress={() => setCameraShown(true)} />
             </View>
           </View>
