@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import styled from 'styled-components/native'
+import styled from 'styled-components/native';
 import { RNCamera } from 'react-native-camera';
 
 const Flex = styled.View`

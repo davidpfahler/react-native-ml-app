@@ -34,10 +34,11 @@ target 'ReactNativeMLApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'ReactNativeMLAppTests' do
     inherit! :search_paths

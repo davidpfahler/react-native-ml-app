@@ -30,7 +30,7 @@ export function getTopKClassesFromActs (k, classes, acts) {
     return topK.map(({key, value}, _, acts) => ({
         breed: classes[key],
         act: value,
-        prob: Math.exp(value) / denominator,
+        percentage: ((Math.exp(value) / denominator) * 100).toFixed(2),
     }));
 }
 
