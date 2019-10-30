@@ -51,13 +51,11 @@ export default () => {
     }, [imgData]); // runs when imgData changes
 
     return (<Provider theme={theme}>
+        <SafeAreaHelper onInsetsChange={onSafeAreaInsetsChange} />
+        <StatusBar barStyle="dark-content" />
         {cameraShown ? <CameraScreen
             onPicTaken={onPicTaken}
             safeAreaInsets={safeAreaInsets}
-        /> : <>
-                <SafeAreaHelper onInsetsChange={onSafeAreaInsetsChange} />
-                <StatusBar barStyle="dark-content" />
-                <Main showCamera={() => setCameraShown(true)} imgData={imgData} top5={top5} />
-            </>
+        /> : <Main showCamera={() => setCameraShown(true)} imgData={imgData} top5={top5} />
         }</Provider>);
 };
