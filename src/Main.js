@@ -1,5 +1,4 @@
 import React from 'react';
-import { Appbar } from 'react-native-paper';
 import {
     SafeAreaView,
     ScrollView,
@@ -8,6 +7,14 @@ import styled from 'styled-components/native';
 
 import ImageCard from './ImageCard';
 import ScoreCard from './ScoreCard';
+import colors from './colors';
+
+const Appbar = styled.View`
+    height: 50px;
+    background: ${colors.primary};
+    align-items: center;
+    justify-content: center;
+`;
 
 const AppbarTitle = styled.Text`
     font-size: 24;
