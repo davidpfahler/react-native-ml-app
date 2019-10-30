@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, List, Avatar } from 'react-native-paper';
+import { Text, List, Avatar } from 'react-native-paper';
 import styled from 'styled-components/native';
-import { Text } from 'react-native';
 
 import {CardView, CenteredCard } from './CenteredCard';
 import images from './assets/images';
@@ -24,15 +23,15 @@ const Item = ({img, title, percentage}) => (
     />
 );
 
-export default ({top5}) => top5.length ? (
+export default ({top5}) => (
     <CardView>
         <CenteredCard elevation={2}>
-            {top5.map(({breed, percentage}) => <Item
+            {top5.length ? top5.map(({breed, percentage}) => <Item
                 key={breed}
                 img={images[breed]}
                 title={getBreed(breed)}
                 percentage={percentage}
-            />)}
+            />) : <Text>Please tap on the card above to take a picture of a dog. Classification results will be displayed here.</Text>}
         </CenteredCard>
     </CardView>
-) : null;
+);
