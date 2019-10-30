@@ -7,6 +7,7 @@ import styled from 'styled-components/native';
 
 import ImageCard from './ImageCard';
 import ScoreCard from './ScoreCard';
+import TakePicture from './TakePicture';
 import colors from './colors';
 
 const Appbar = styled.View`
@@ -28,12 +29,15 @@ const FullHeightScrollView = styled(ScrollView)`
 
 export default ({ showCamera, imgData, top5 }) => {
     return (<SafeAreaView>
-        <FullHeightScrollView contentInsetAdjustmentBehavior="automatic">
+        <FullHeightScrollView contentInsetAdjustmentBehavior="automatic" contentContainerStyle={{
+            flexGrow: 1,
+        }}>
             <Appbar>
                 <AppbarTitle>Dog Breed Classifier</AppbarTitle>
             </Appbar>
-            <ImageCard onPress={showCamera} coverImg={imgData} />
-            <ScoreCard top5={top5} />
+            {!imgData && <TakePicture onPress={showCamera} />}
+            {!!imgData && <ImageCard onPress={showCamera} coverImg={imgData} />}
+            {!!top5.length && (<ScoreCard top5={top5} />) }
         </FullHeightScrollView>
     </SafeAreaView>);
 }
