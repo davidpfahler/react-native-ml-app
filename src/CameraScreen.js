@@ -2,6 +2,8 @@ import React, {useRef} from 'react';
 import styled from 'styled-components/native';
 import { RNCamera } from 'react-native-camera';
 
+import CameraCorners from './CameraCorners';
+
 const Flex = styled.View`
   flex: ${({flex = 1}) => flex};
 `
@@ -19,7 +21,7 @@ const Content = styled.View`
   left: 0;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `
 
 const Fill = styled.View`
@@ -74,6 +76,7 @@ export default function CameraScreen ({onPicTaken, safeAreaInsets}) {
         captureAudio={false}
       />
       <Content>
+        <CameraCorners />
         <Fill />
         <TriggerWrap inset={safeAreaInsets.bottom}>
           <Trigger onPress={takePictureAsync} />
