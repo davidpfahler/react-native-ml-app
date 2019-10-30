@@ -575,7 +575,7 @@
 				CODE_SIGN_ENTITLEMENTS = ReactNativeMLApp/ReactNativeMLApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				INFOPLIST_FILE = ReactNativeMLApp/Info.plist;
@@ -605,7 +605,7 @@
 				CODE_SIGN_ENTITLEMENTS = ReactNativeMLApp/ReactNativeMLApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 4LVMDLAZ4X;
 				INFOPLIST_FILE = ReactNativeMLApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

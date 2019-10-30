@@ -15,7 +15,7 @@ const Base = styled.View`
     height: 60px;
     width: 60px;
     border-color: ${({ color }) => color};
-    margin: 2px;
+    margin: 0 10px;
 `;
 const TopLeft = styled(Base)`
     top: ${({ padding }) => padding};
