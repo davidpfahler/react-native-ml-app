@@ -1,7 +1,7 @@
 export default {
     primary: '#3f51b5',
     primaryDark: '#ffd319',
-    secondary: '#3b4a4f',
+    secondary: 'white',
     error: '#ff6c19',
     errorSoft: '#f3b18b',
     success: '#a4ef17',

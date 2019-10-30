@@ -58,9 +58,8 @@ const TriggerWrap = styled.View`
   border: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 35px;
-  background-color: ${colors.primary};
+  background-color: transparent;
   border-color: ${colors.secondary};
-  background-color: ${colors.primary};
 `
 
 const Trigger = styled.TouchableOpacity`
@@ -72,8 +71,8 @@ const Trigger = styled.TouchableOpacity`
 `
 
 const captureOpts = {
-    width: 299,
-    height: 299,
+    width: 1000,
+    height: 1000,
     quality: 1.0,
     base64: false,
     pauseAfterCapture: false,

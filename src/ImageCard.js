@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-native-paper';
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import AwesomeIcon from 'react-native-vector-icons/MaterialIcons';
 
@@ -10,17 +10,24 @@ const ImageIcon = styled(AwesomeIcon)`
     max-width: 50%;
     align-self: center;
 `;
+const Image = styled.Image`
+    width: 100%;
+    padding-top: 100%;
+`;
 
-const Cover = styled(Card.Cover)`
-    height: 299px;
-    width: 299px;
-`
+const TouchableImage = ({onPress, uri}) => (
+    <TouchableOpacity onPress={onPress}>
+        <Image source={{ uri }} />
+    </TouchableOpacity>
+);
 
-export default ({onPress, coverImg}) => (
+export default ({onPress, coverImg}) => coverImg ? <TouchableImage 
+        uri={coverImg.uri}
+        onPress={onPress}
+    /> : (
     <CardView>
         <CenteredCard elevation={2} onPress={onPress}>
-            {coverImg && <Cover source={{ uri: coverImg.uri }} />}
-            {!coverImg && <ImageIcon size={150} name="image" />}
+            <ImageIcon size={150} name="image" />
         </CenteredCard>
     </CardView>
 )
